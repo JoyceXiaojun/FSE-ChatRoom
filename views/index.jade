@@ -1,5 +1,16 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .wrap
+    .container-fluid
+      h1 FSE ChatRoom
+      #messages
+
+      .push
+  .footer
+    .container-fluid
+      #sendarea.row
+        .col-xs-8.col-sm-9
+          input(type="text" id="message-box" class="form-control input-lg" placeholder="Write a message here..." rows="3")
+        .col-xs-4.col-sm-3
+          button#send-message-btn.btn.btn-primary.btn-lg.btn-block Send
